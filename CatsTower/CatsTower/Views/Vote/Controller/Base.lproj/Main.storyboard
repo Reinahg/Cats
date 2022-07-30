@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="flc-jb-Fke">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cne-Yb-Swm">
+            <objects>
+                <tabBarController id="flc-jb-Fke" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YPi-vL-R9x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="background"/>
+                        <color key="tintColor" name="background"/>
+                        <color key="barTintColor" name="background"/>
+                        <color key="selectedImageTintColor" name="darkBrownApp"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="RhJ-YB-8fZ"/>
+                        <segue destination="Hpf-0e-9iM" kind="relationship" relationship="viewControllers" id="tlj-OH-A9Z"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmQ-e2-am5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1561" y="-295"/>
+        </scene>
+        <!--Votar-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="VoteViewController" customModule="CatsTower" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat_icon" translatesAutoresizingMaskIntoConstraints="NO" id="rqy-fZ-F1Q" customClass="RoundImage" customModule="CatsTower" customModuleProvider="target">
+                                <rect key="frame" x="82" y="84" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Sju-kM-3u4"/>
+                                    <constraint firstAttribute="width" constant="250" id="yjK-jQ-vyv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Roj-7T-zWI">
+                                <rect key="frame" x="144.5" y="354" width="125" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_icon" translatesAutoresizingMaskIntoConstraints="NO" id="AP1-pb-iQ7">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Gbo-0T-G37"/>
+                                            <constraint firstAttribute="width" constant="50" id="StF-go-2gW"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="broken_heart" translatesAutoresizingMaskIntoConstraints="NO" id="fTG-eh-KmZ">
+                                        <rect key="frame" x="75" y="0.0" width="50" height="50"/>
+                                        <color key="tintColor" name="DarkRed"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Tp7-Aq-cNJ"/>
+                                            <constraint firstAttribute="width" constant="50" id="Ylf-tR-koA"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cny-WU-0HM">
+                                <rect key="frame" x="103.5" y="759.5" width="207" height="38.5"/>
+                                <color key="tintColor" name="brownApp"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Ver gustos">
+                                    <fontDescription key="titleFontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionLikees:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MfD-4q-9oq"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Ya viste todos los gatos!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeN-nA-io8">
+                                <rect key="frame" x="68" y="434.5" width="278" height="27"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkY-aR-vUj">
+                                <rect key="frame" x="103.5" y="696" width="207" height="38.5"/>
+                                <color key="tintColor" name="darkBrownApp"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Reiniciar">
+                                    <fontDescription key="titleFontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionReload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mlB-di-d0T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="Roj-7T-zWI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hjk-E3-Hib"/>
+                            <constraint firstItem="LkY-aR-vUj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Hzh-g6-Msi"/>
+                            <constraint firstItem="rqy-fZ-F1Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kig-sX-vw5"/>
+                            <constraint firstItem="WeN-nA-io8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LaH-m1-2fP"/>
+                            <constraint firstItem="rqy-fZ-F1Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="NTA-Ik-XYJ"/>
+                            <constraint firstItem="WeN-nA-io8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Okh-Ol-Nuu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cny-WU-0HM" secondAttribute="bottom" constant="15" id="SHE-CP-sFg"/>
+                            <constraint firstItem="cny-WU-0HM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="cSm-63-oh7"/>
+                            <constraint firstItem="Roj-7T-zWI" firstAttribute="top" secondItem="rqy-fZ-F1Q" secondAttribute="bottom" constant="20" id="ff9-48-tnQ"/>
+                            <constraint firstItem="cny-WU-0HM" firstAttribute="top" secondItem="LkY-aR-vUj" secondAttribute="bottom" constant="25" id="mHP-oD-GDI"/>
+                            <constraint firstItem="cny-WU-0HM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o9l-uZ-oyf"/>
+                            <constraint firstItem="LkY-aR-vUj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pED-e7-zht"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Votar" image="tray.fill" catalog="system" selectedImage="tray.fill" id="Xn2-1c-xmZ"/>
+                    <connections>
+                        <outlet property="btnLikes" destination="cny-WU-0HM" id="DTN-PK-XA6"/>
+                        <outlet property="btnReload" destination="LkY-aR-vUj" id="p0w-4p-DZR"/>
+                        <outlet property="cat_image" destination="rqy-fZ-F1Q" id="Vlp-mG-aGj"/>
+                        <outlet property="dislike_cat" destination="fTG-eh-KmZ" id="fpc-eK-V8F"/>
+                        <outlet property="lblSeen" destination="WeN-nA-io8" id="JJV-vU-lnQ"/>
+                        <outlet property="like_cat" destination="AP1-pb-iQ7" id="C3e-07-ezg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-625" y="-407"/>
+        </scene>
+        <!--CatsInfo-->
+        <scene sceneID="FSw-M7-Jsr">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="catsinfo" storyboardName="CatsInfo" id="Hpf-0e-9iM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xLs-22-omK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egO-0D-HRb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80" y="-15"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="rqy-fZ-F1Q">
+            <size key="intrinsicContentSize" width="512" height="512"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="broken_heart" width="512" height="512"/>
+        <image name="cat_icon" width="512" height="512"/>
+        <image name="heart_icon" width="512" height="512"/>
+        <image name="tray.fill" catalog="system" width="128" height="88"/>
+        <namedColor name="DarkRed">
+            <color red="0.32549019607843138" green="0.082352941176470587" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="background">
+            <color red="1" green="1" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="brownApp">
+            <color red="0.84705882352941175" green="0.68627450980392157" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkBrownApp">
+            <color red="0.65098039215686276" green="0.50196078431372548" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
